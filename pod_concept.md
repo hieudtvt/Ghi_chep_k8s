@@ -21,5 +21,5 @@
 ### Check all info pod
 
 `kubectl describe my-app` 
-1[](https://imgur.com/YqU1dm7.png)
+![](https://imgur.com/YqU1dm7.png)
 
