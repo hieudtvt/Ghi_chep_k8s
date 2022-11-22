@@ -3,6 +3,7 @@
 ## Command
 ### Info pod
 - `kubectl get pods`: xem một số thông tin pod như sau:
+
 ![](https://imgur.com/qne7e3L.png)
   - **name**: tên của pod mà ta định nghĩa ở **metadata** 
   - **READY**: số lượng container đã ready-ok trong pod
