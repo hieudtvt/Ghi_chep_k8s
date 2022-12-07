@@ -60,6 +60,7 @@ spec:
       nodePort: 31000
 ```
 - Kết quả tạo ra như sau:
+
 ![](https://imgur.com/xfbZW1k.png)
 ## Test deployment
 - Ta có một image mới với source code sau
@@ -189,6 +190,7 @@ spec:
       nodePort: 31000
 ```
 - Trạng thái pod đang chạy
+
 ![](https://imgur.com/L6XCAyT.png)
 - Khi cập nhật lại Deployment bằng câu lệnh
 ```
