@@ -13,6 +13,9 @@
   - **Restart**: số lần khởi động lại của pod
   - **Age**: thời gian tính từ lúc pod được tạo
 ### Chui vào pod
+- `kubectl exec (Pod | type/name) [-c container] [flags] -- command [args...]`
+- Với pod chỉ chứa 1 container thì không cần chỉ định thêm tên container trong pod
+- Nếu 1 pod chứa nhiều container thì cần sử dụng thêm option -c để chỉ định tên của một container cụ thể.
 - `kubectl exec -it my-app -- bash`: chui vào trong pod
 ![](https://imgur.com/vZTGasy.png)
 ### Check log của pod
@@ -22,4 +25,3 @@
 
 `kubectl describe my-app` 
 ![](https://imgur.com/YqU1dm7.png)
-
