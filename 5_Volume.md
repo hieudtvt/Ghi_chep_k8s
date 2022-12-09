@@ -92,8 +92,9 @@ spec:
       volumeMounts:
         - name: html
           mountPath: /usr/share/nginx/html
-          readOnly: true
-        - name: log # log volume
+        - name: time
+          mountPath: /etc/localtime
+        - name: test-log # log volume
           mountPath: /var/log/nginx # mounted at /var/log/nginx in the container
       ports:
         - containerPort: 80
@@ -104,11 +105,19 @@ spec:
         repository: https://github.com/luksa/kubia-website-example.git # The volume will clone this Git repository
         revision: master # master branch
         directory: . # cloned into the root dir of the volume.
-    - name: log
+    - name: test-log
       hostPath: # hostPath volume
-        path: /var/log # folder of woker node
+        path: /var/log # folder of woker nod
+    - name: time
+      hostPath:
+        path: /usr/share/zoneinfo/Asia/Ho_Chi_Minh
 ```
-
+![](https://imgur.com/bV0Ov5p.png)
+- Trong đó: 
+  - `mountPath: /usr/share/nginx/html`: đường dẫn của pod mà ta sẽ mount ra ngoài filesystem của Workernode
+  - `name: html`: là tên volume
+  - `hostPath`: khai báo dạng volume
+  - `path: /var/log`: vị trí nằm ở workernode mà volume **html** sẽ mount tới
 
 
 
