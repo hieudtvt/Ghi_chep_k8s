@@ -26,7 +26,7 @@
   - Container `myvolume_2` sẽ mount emptyDir volume vào thư mục `/demo2`
 ```
 # vi myVolumes-Pod.yaml
-```
+
 apiVersion: v1
 kind: Pod
 metadata:
